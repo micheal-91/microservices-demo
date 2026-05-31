@@ -6,13 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: ' https://github.com/micheal-91/microservices-demo.git'
+    repoURL: 'https://github.com/micheal-91/microservices-demo.git'
     targetRevision: HEAD
-    path: kustomize # Points to the folder containing your Kustomize files
+    path: .                    # Tells ArgoCD to look in the root folder of your repo
+    directory:
+      include: 'test-hydrated.yaml' # Directly syncs your exact Skaffold output file
   destination:
-    server: 'https://kubernetes.default.svc' # Deploys straight to your local RKE2 cluster
-    namespace: default
+    server: 'https://kubernetes.default.svc'
+    namespace: default         # Deploys your microservices into the default namespace
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: true              # Automatically deletes old resources if you remove them from YAML
+      selfHeal: true           # Automatically fixes configuration drift if someone modifies RKE2 manually
