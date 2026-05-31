@@ -249,7 +249,7 @@ spec:
       - env:
         - name: PORT
           value: "9555"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/adservice:v0.10.0
+        image: ghcr.io/micheal-91/adservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 9555
@@ -306,7 +306,7 @@ spec:
       - env:
         - name: REDIS_ADDR
           value: redis-cart:6379
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/cartservice:v0.10.0
+        image: ghcr.io/micheal-91/cartservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 7070
@@ -374,7 +374,7 @@ spec:
           value: currencyservice:7000
         - name: CART_SERVICE_ADDR
           value: cartservice:7070
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/checkoutservice:v0.10.0
+        image: ghcr.io/micheal-91/checkoutservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 5050
@@ -428,7 +428,7 @@ spec:
           value: "7000"
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/currencyservice:v0.10.0
+        image: ghcr.io/micheal-91/currencyservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 7000
@@ -484,7 +484,7 @@ spec:
           value: "8080"
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/emailservice:v0.10.0
+        image: ghcr.io/micheal-91/emailservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 8080
@@ -559,7 +559,7 @@ spec:
           value: shoppingassistantservice:80
         - name: ENABLE_PROFILER
           value: "0"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/frontend:v0.10.0
+        image: ghcr.io/micheal-91/frontend:sic-jss-518-g7c538677
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -623,7 +623,7 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/paymentservice:v0.10.0
+        image: ghcr.io/micheal-91/paymentservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 50051
@@ -678,7 +678,7 @@ spec:
           value: "3550"
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/productcatalogservice:v0.10.0
+        image: ghcr.io/micheal-91/productcatalogservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 3550
@@ -735,7 +735,7 @@ spec:
           value: productcatalogservice:3550
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/recommendationservice:v0.10.0
+        image: ghcr.io/micheal-91/recommendationservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 8080
@@ -787,7 +787,7 @@ spec:
       imagePullSecrets:
         - name: ghcr-secret
       containers:
-      - image: ghcr.io/micheal-91/redis:alpine
+      - image: redis:alpine
         livenessProbe:
           periodSeconds: 5
           tcpSocket:
@@ -848,7 +848,7 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/shippingservice:v0.10.0
+        image: ghcr.io/micheal-91/shippingservice:sic-jss-518-g7c538677
         livenessProbe:
           grpc:
             port: 50051
