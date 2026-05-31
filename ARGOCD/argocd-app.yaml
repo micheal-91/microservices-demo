@@ -8,13 +8,13 @@ spec:
   source:
     repoURL: 'https://github.com/micheal-91/microservices-demo.git'
     targetRevision: HEAD
-    path: .                    # Tells ArgoCD to look in the root folder of your repo
+    path: .
     directory:
-      include: 'test-hydrated.yaml' # Directly syncs your exact Skaffold output file
+      include: '{test-hydrated.yaml}'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default         # Deploys your microservices into the default namespace
+    namespace: default
   syncPolicy:
     automated:
-      prune: true              # Automatically deletes old resources if you remove them from YAML
-      selfHeal: true           # Automatically fixes configuration drift if someone modifies RKE2 manually
+      prune: true
+      selfHeal: true
