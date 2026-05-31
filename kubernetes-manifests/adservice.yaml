@@ -19,8 +19,7 @@ metadata:
   labels:
     app: adservice
 spec:
-  replicas: 2 # add 
-
+  replicas: 4 # add 
   selector:
     matchLabels:
       app: adservice
