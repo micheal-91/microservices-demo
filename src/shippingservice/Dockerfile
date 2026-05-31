@@ -22,6 +22,7 @@ WORKDIR /src
 
 # restore dependencies
 COPY go.mod go.sum ./
+ENV GOPROXY=https://proxy.golang.org,direct
 RUN go mod download
 COPY . .
 

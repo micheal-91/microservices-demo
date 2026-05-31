@@ -243,11 +243,13 @@ spec:
       labels:
         app: adservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "9555"
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/adservice:v0.10.0
         livenessProbe:
           grpc:
             port: 9555
@@ -298,11 +300,13 @@ spec:
       labels:
         app: cartservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: REDIS_ADDR
           value: redis-cart:6379
-        image: gcr.io/google-samples/microservices-demo/cartservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/cartservice:v0.10.0
         livenessProbe:
           grpc:
             port: 7070
@@ -352,6 +356,8 @@ spec:
       labels:
         app: checkoutservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
@@ -368,7 +374,7 @@ spec:
           value: currencyservice:7000
         - name: CART_SERVICE_ADDR
           value: cartservice:7070
-        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/checkoutservice:v0.10.0
         livenessProbe:
           grpc:
             port: 5050
@@ -414,13 +420,15 @@ spec:
       labels:
         app: currencyservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "7000"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/currencyservice:v0.10.0
         livenessProbe:
           grpc:
             port: 7000
@@ -468,13 +476,15 @@ spec:
       labels:
         app: emailservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "8080"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/emailservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/emailservice:v0.10.0
         livenessProbe:
           grpc:
             port: 8080
@@ -525,6 +535,8 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
@@ -547,7 +559,7 @@ spec:
           value: shoppingassistantservice:80
         - name: ENABLE_PROFILER
           value: "0"
-        image: gcr.io/google-samples/microservices-demo/frontend:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/frontend:v0.10.0
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -603,13 +615,15 @@ spec:
       labels:
         app: paymentservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/paymentservice:v0.10.0
         livenessProbe:
           grpc:
             port: 50051
@@ -656,13 +670,15 @@ spec:
       labels:
         app: productcatalogservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "3550"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/productcatalogservice:v0.10.0
         livenessProbe:
           grpc:
             port: 3550
@@ -709,6 +725,8 @@ spec:
       labels:
         app: recommendationservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
@@ -717,7 +735,7 @@ spec:
           value: productcatalogservice:3550
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/recommendationservice:v0.10.0
         livenessProbe:
           grpc:
             port: 8080
@@ -766,8 +784,10 @@ spec:
       labels:
         app: redis-cart
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
-      - image: redis:alpine
+      - image: ghcr.io/micheal-91/redis:alpine
         livenessProbe:
           periodSeconds: 5
           tcpSocket:
@@ -820,13 +840,15 @@ spec:
       labels:
         app: shippingservice
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - env:
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/shippingservice:v0.10.0
+        image: ghcr.io/micheal-91/gcr.io/google-samples/microservices-demo/shippingservice:v0.10.0
         livenessProbe:
           grpc:
             port: 50051
