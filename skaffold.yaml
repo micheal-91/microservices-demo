@@ -96,112 +96,112 @@ manifests:
   kustomize:
     paths:
       - kubernetes-manifests
-deploy:
-  helm:
-    releases:
-      - name: onlineboutique
-        chartPath: helm-chart
-        valuesFiles:
-          - helm-chart/values.yaml
-        version: 0.10.5
-profiles:
-  - name: kustomize
-    manifests:
-      kustomize:
-        paths:
-          - kustomize
-  - name: base
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/base
-  - name: alloydb
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/alloydb
-  - name: container-images-registry
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/container-images-registry
-  - name: container-images-tag
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/container-images-tag
-  - name: container-images-tag-suffix
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/container-images-tag-suffix
-  - name: custom-base-url
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/custom-base-url
-  - name: cymbal-branding
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/cymbal-branding
-  - name: google-cloud-operations
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/google-cloud-operations
-  - name: memorystore
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/memorystore
-  - name: network-policies
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/network-policies
-  - name: non-public-frontend
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/non-public-frontend
-  - name: service-mesh-istio
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/service-mesh-istio
-  - name: shopping-assistant
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/shopping-assistant
-  - name: single-shared-session
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/single-shared-session
-  - name: spanner
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/spanner
-  - name: without-loadgenerator
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/components/without-loadgenerator
-  - name: memorystore-with-all-components
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/tests/memorystore-with-all-components
-  - name: service-mesh-istio-with-all-components
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/tests/service-mesh-istio-with-all-components
-  - name: spanner-with-all-components
-    manifests:
-      kustomize:
-        paths:
-          - kustomize/tests/spanner-with-all-components
+# deploy:
+#   helm:
+#     releases:
+#       - name: onlineboutique
+#         chartPath: helm-chart
+#         valuesFiles:
+#           - helm-chart/values.yaml
+#         version: 0.10.5
+# profiles:
+#   - name: kustomize
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize
+#   - name: base
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/base
+#   - name: alloydb
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/alloydb
+#   - name: container-images-registry
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/container-images-registry
+#   - name: container-images-tag
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/container-images-tag
+#   - name: container-images-tag-suffix
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/container-images-tag-suffix
+#   - name: custom-base-url
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/custom-base-url
+#   - name: cymbal-branding
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/cymbal-branding
+#   - name: google-cloud-operations
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/google-cloud-operations
+#   - name: memorystore
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/memorystore
+#   - name: network-policies
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/network-policies
+#   - name: non-public-frontend
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/non-public-frontend
+#   - name: service-mesh-istio
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/service-mesh-istio
+#   - name: shopping-assistant
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/shopping-assistant
+#   - name: single-shared-session
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/single-shared-session
+#   - name: spanner
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/spanner
+#   - name: without-loadgenerator
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/components/without-loadgenerator
+#   - name: memorystore-with-all-components
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/tests/memorystore-with-all-components
+#   - name: service-mesh-istio-with-all-components
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/tests/service-mesh-istio-with-all-components
+#   - name: spanner-with-all-components
+#     manifests:
+#       kustomize:
+#         paths:
+#           - kustomize/tests/spanner-with-all-components
