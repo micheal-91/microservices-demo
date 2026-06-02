@@ -1,0 +1,53 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: online-boutique
+build:
+  local:
+    push: true
+    concurrency: 0
+  artifacts:
+    - image: ghcr.io/micheal-91/adservice
+      context: src/adservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/cartservice
+      context: src/cartservice/src
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/checkoutservice
+      context: src/checkoutservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/currencyservice
+      context: src/currencyservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/emailservice
+      context: src/emailservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/frontend
+      context: src/frontend
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/paymentservice
+      context: src/paymentservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/productcatalogservice
+      context: src/productcatalogservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/recommendationservice
+      context: src/recommendationservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/shippingservice
+      context: src/shippingservice
+      docker:
+        dockerfile: Dockerfile
+    - image: ghcr.io/micheal-91/loadgenerator
+      context: src/loadgenerator
+      docker:
+        dockerfile: Dockerfile
