@@ -4,54 +4,55 @@ metadata:
   name: git-local
 build:
   artifacts:
-    - image: ghcr.io/micheal-91/adservice
+    - image: adservice
       context: src/adservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/cartservice
+    - image: cartservice
       context: src/cartservice/src
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/checkoutservice
+    - image: checkoutservice
       context: src/checkoutservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/currencyservice
+    - image: currencyservice
       context: src/currencyservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/emailservice
+    - image: emailservice
       context: src/emailservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/frontend
+    - image: frontend
       context: src/frontend
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/loadgenerator
+    - image: loadgenerator
       context: src/loadgenerator
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/paymentservice
+    - image: paymentservice
       context: src/paymentservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/productcatalogservice
+    - image: productcatalogservice
       context: src/productcatalogservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/recommendationservice
+    - image: recommendationservice
       context: src/recommendationservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/shippingservice
+    - image: shippingservice
       context: src/shippingservice
       docker:
         dockerfile: Dockerfile
-    - image: ghcr.io/micheal-91/shoppingassistantservice
+    - image: shoppingassistantservice
       context: src/shoppingassistantservice
       docker:
         dockerfile: Dockerfile
 manifests:
   rawYaml:
-    - kubernetes-manifests/*.yaml          
+    - kubernetes-manifests/*.yaml 
+    - test-hydratedOld.yaml
