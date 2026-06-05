@@ -55,4 +55,4 @@ build:
 manifests:
   rawYaml:
     - kubernetes-manifests/*.yaml 
-    - test-hydratedOld.yaml
+    
