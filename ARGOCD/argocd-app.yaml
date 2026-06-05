@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  "https://github.com/micheal-91/microservices-demo.git"
+    repoURL:  https://github.com/micheal-91/microservices-demo.git
     targetRevision: HEAD
     path: .
     directory:
-      include: '{test-hydratedOld.yaml}'
+      include: 'test-hydratedOld.yaml'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
