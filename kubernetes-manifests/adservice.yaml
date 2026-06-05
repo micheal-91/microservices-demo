@@ -49,7 +49,7 @@ spec:
         - containerPort: 9555
         env:
         - name: PORT
-          value: "95551"
+          value: "9555"
         resources:
           requests:
             cpu: 200m
