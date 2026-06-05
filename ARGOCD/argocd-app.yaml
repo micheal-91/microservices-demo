@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL:  https://github.com/micheal-91/microservices-demo.git
-    targetRevision: HEAD
+    targetRevision: main
     path: .
     directory:
       include: 'test-hydratedOld.yaml'
