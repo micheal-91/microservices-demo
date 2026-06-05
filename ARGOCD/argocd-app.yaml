@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: .
     directory:
-      include: '{test-hydrated-new.yaml}'
+      include: '{test-hydratedOld.yaml}'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
