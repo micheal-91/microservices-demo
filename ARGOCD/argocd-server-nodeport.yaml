@@ -11,4 +11,4 @@ spec:
     - name: https
       port: 443
       targetPort: 8080
-      # nodePort: 30443
+      nodePort: 30443
