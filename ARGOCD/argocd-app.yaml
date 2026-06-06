@@ -8,10 +8,10 @@ spec:
   source:
     repoURL:  https://github.com/micheal-91/microservices-demo.git
     targetRevision: main
-    path: kubernetes-manifests
-    # path: .
-    # directory:
-    #   include: 'test-hydratedOld.yaml'
+    # path: kubernetes-manifests # this when use Kustomize it will check it 
+    path: . # when use skaffold only changes vi test-hydratedOld.yaml
+    directory:
+      include: 'test-hydratedOld.yaml'
      
   destination:
     server: 'https://kubernetes.default.svc'
