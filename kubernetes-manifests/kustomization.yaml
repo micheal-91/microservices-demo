@@ -53,21 +53,21 @@
 # # See the License for the specific language governing permissions and
 # # limitations under the License.
 
-# apiVersion: kustomize.config.k8s.io/v1beta1
-# kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 
-# resources:
-#  - adservice.yaml
-#  - cartservice.yaml
-#  - checkoutservice.yaml
-#  - currencyservice.yaml
-#  - emailservice.yaml
-#  - frontend.yaml
-# # - loadgenerator.yaml # During development, the loadgenerator module inside skaffold.yaml will be used.
-#  - paymentservice.yaml
-#  - productcatalogservice.yaml
-#  - recommendationservice.yaml
-#  - shippingservice.yaml
+resources:
+ - adservice.yaml
+ - cartservice.yaml
+ - checkoutservice.yaml
+ - currencyservice.yaml
+ - emailservice.yaml
+ - frontend.yaml
+# - loadgenerator.yaml # During development, the loadgenerator module inside skaffold.yaml will be used.
+ - paymentservice.yaml
+ - productcatalogservice.yaml
+ - recommendationservice.yaml
+ - shippingservice.yaml
 
 # # Added to pull verified public pre-built images from Google's Container Registry
 # images:
