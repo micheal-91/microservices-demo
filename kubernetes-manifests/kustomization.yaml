@@ -70,10 +70,10 @@ resources:
  - shippingservice.yaml
 
 # # Added to pull verified public pre-built images from Google's Container Registry
-# images:
-#   - name: adservice
-#     newName: gcr.io/google-samples/microservices-demo/adservice
-#     newTag: v0.10.0
+images:
+  - name: adservice
+    newName: ghcr.io/micheal-91/adservice:sic-jss-570-g5b2daa9f@sha256:ddf8a02f5e9d3386026c8dbfc9424c113e93a1960c1fa8143b36ac7ca2b22244
+    # newTag: v0.10.0
 #   - name: cartservice
 #     newName: gcr.io/google-samples/microservices-demo/cartservice
 #     newTag: v0.10.0
