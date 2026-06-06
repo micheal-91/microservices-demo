@@ -8,11 +8,11 @@ spec:
   source:
     repoURL:  https://github.com/micheal-91/microservices-demo.git
     targetRevision: main
-    path: .
-    directory:
-      include: 
-      # -'test-hydratedOld.yaml'
-      - kubernetes-manifests/*.yaml 
+    path: kubernetes-manifests
+    # path: .
+    # directory:
+    #   include: 'test-hydratedOld.yaml'
+     
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
