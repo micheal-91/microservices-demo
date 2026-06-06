@@ -11,7 +11,7 @@ spec:
     # path: kubernetes-manifests # this when use Kustomize it will check it 
     path: . # when use skaffold only changes vi test-hydratedOld.yaml
     directory:
-      include: 'test-hydratedOld.yaml'
+      include: 'hydrated.yaml'
      
   destination:
     server: 'https://kubernetes.default.svc'
