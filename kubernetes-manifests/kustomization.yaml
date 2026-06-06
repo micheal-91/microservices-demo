@@ -52,27 +52,27 @@
 # # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # # See the License for the specific language governing permissions and
 # # limitations under the License.
+#from 56 to 75
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
 
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
+# resources:
+#  - adservice.yaml
+#  - cartservice.yaml
+#  - checkoutservice.yaml
+#  - currencyservice.yaml
+#  - emailservice.yaml
+#  - frontend.yaml
+# # - loadgenerator.yaml # During development, the loadgenerator module inside skaffold.yaml will be used.
+#  - paymentservice.yaml
+#  - productcatalogservice.yaml
+#  - recommendationservice.yaml
+#  - shippingservice.yaml
 
-resources:
- - adservice.yaml
- - cartservice.yaml
- - checkoutservice.yaml
- - currencyservice.yaml
- - emailservice.yaml
- - frontend.yaml
-# - loadgenerator.yaml # During development, the loadgenerator module inside skaffold.yaml will be used.
- - paymentservice.yaml
- - productcatalogservice.yaml
- - recommendationservice.yaml
- - shippingservice.yaml
-
-# # Added to pull verified public pre-built images from Google's Container Registry
-images:
-  - name: adservice
-    newName: ghcr.io/micheal-91/adservice:sic-jss-570-g5b2daa9f@sha256:ddf8a02f5e9d3386026c8dbfc9424c113e93a1960c1fa8143b36ac7ca2b22244
+# # # Added to pull verified public pre-built images from Google's Container Registry
+# images:
+#   - name: adservice
+#     newName: ghcr.io/micheal-91/adservice:sic-jss-570-g5b2daa9f@sha256:ddf8a02f5e9d3386026c8dbfc9424c113e93a1960c1fa8143b36ac7ca2b22244
     # newTag: v0.10.0
 #   - name: cartservice
 #     newName: gcr.io/google-samples/microservices-demo/cartservice
