@@ -5,7 +5,7 @@ metadata:
     app: adservice
   name: adservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: adservice
