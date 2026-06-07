@@ -144,7 +144,6 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: boutique.com  
   - http:
       paths:
       - path: /
