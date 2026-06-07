@@ -553,7 +553,8 @@ metadata:
   namespace: default
 spec:
   rules:
-    - http:
+  - host: boutique.2026.com  #testing 
+    http:
         paths:
           - backend:
               service:
