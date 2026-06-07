@@ -4,4 +4,4 @@
 git add .
 git commit . -m "new update"
 git push
-echo "done"
+echo "sync with remote repo done "
